@@ -17,6 +17,7 @@ Git is free software
 - git reset --hard HEAD^ #回退到上一个版本,HEAD^^^或HEAD~100,HEAD指向master的最新节点，HEAD^就是HEAD的上一个节点
 - git reset --hard a4ef3f #再到最新的版本，或者指定版本号从而回到指定版本。版本号·写5位数字以上
 - git reflog #在任何时间查看任何 穿越 过的文件
+- git log --graph --pretty=oneline --abbrev-commit # 简要查看提交记录
 
 **以上几步只是建立了本地git仓库，提交和回退版本也只是在本地git仓库**
 
@@ -28,10 +29,10 @@ Git is free software
 - git push -u origin master #把本地仓库的所有内容推送到远程仓库，-u可看作union，即把本地和远程仓库关联
 
 ## 后悔药
-git rm --cached Notes/\* # 从repository里删除之前追踪的文件, 在同步之后，文件的父目录也被删除
-git rm --cached file # 从repository里删除之前追踪的文件
-git commit -m "delete Notes"
-git push origin master 
+- git rm --cached Notes/\* # 从repository里删除之前追踪的文件, 在同步之后，文件的父目录也被删除
+- git rm --cached file # 从repository里删除之前追踪的文件
+- git commit -m "delete Notes"
+- git push -u origin master 
 
 ## 分支管理
 - git branch dev #创建dev分支
@@ -51,33 +52,34 @@ git push origin master
 
 
 # git CW
-git init # initialize git
-git add . # add all file of current dir
-vim修改文件
-git diff # 查看文件有什么改动
-再次添加git add .
-git status # 查看当前文件的提交状态
-git reset # 撤回添加的更改
+- git init # initialize git
+- git add . # add all file of current dir
+- vim修改文件
+- git diff # 查看文件有什么改动
+- 再次添加git add .
+- git status # 查看当前文件的提交状态
+- git reset # 撤回添加的更改
 
 commit之前确保已经表明自己的身份
 
 - git config --global user.name "V2X2M"  
 - git config --global user.email "lxkqv@outlook.com"  
 - git config credential.helper store #用于保存密码
-git commit -m "描述"
-git commit<CR> #打开默认编辑器输入您的描述
-git config --globle core.editer #默认编辑器
+- git commit -m "描述"
+- git commit<CR> #打开默认编辑器输入您的描述
+- git config --globle core.editer #默认编辑器
 
 vim .gitignore #添加忽略提交的文件
+
 git rm --cached file # 从repository里删除之前追踪的文件
 
 ## git分支
-git branch picture #创建分支
-git checkout picture #切换到picture分支
-git checkout master #切换到 主 分支
-git merge picture #把刚刚建立的分支picture合并到 master
-git branch -d picture #删除分支picture
-git branch -D picture #如果picture没有合并到主分支，仍然强制删除
+- git branch picture #创建分支
+- git checkout picture #切换到picture分支
+- git checkout master #切换到 主 分支
+- git merge picture #把刚刚建立的分支picture合并到 master
+- git branch -d picture #删除分支picture
+- git branch -D picture #如果picture没有合并到主分支，仍然强制删除
 
 ## git项目
 - github网站上手动建立项目（存储库）
