@@ -14,7 +14,7 @@ Git is free software
 
 ## git 穿越
 - git log # View content which is change
-- git reset --hard HEAD^ #回退到上一个版本,HEAD^^^或HEAD~100
+- git reset --hard HEAD^ #回退到上一个版本,HEAD^^^或HEAD~100,HEAD指向master的最新节点，HEAD^就是HEAD的上一个节点
 - git reset --hard a4ef3f #再到最新的版本，或者指定版本号从而回到指定版本。版本号·写5位数字以上
 - git reflog #在任何时间查看任何 穿越 过的文件
 
@@ -26,6 +26,19 @@ Git is free software
 - 在github网站上建立一个远程仓库，但嫑初始化，即嫑 README.md 文件
 - git remote add origin https://github.com/V2X2M/learngit.git
 - git push -u origin master #把本地仓库的所有内容推送到远程仓库，-u可看作union，即把本地和远程仓库关联
+
+## 后悔药
+git rm --cached Notes/\* # 从repository里删除之前追踪的文件, 在同步之后，文件的父目录也被删除
+git rm --cached file # 从repository里删除之前追踪的文件
+git commit -m "delete Notes"
+git push origin master 
+
+## 分支管理
+- git branch dev #创建dev分支
+- git checkout dev #切换到dev分支
+- #git checkout -b dev # 创建并切换到 dev 分支
+- git branch #查看当前分支
+- #结果显示dev分支上有一个标识，代表当前所在分支
 
 
 
