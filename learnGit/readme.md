@@ -39,13 +39,14 @@ git push origin master
 - #git checkout -b dev # 创建并切换到 dev 分支
 - git branch #查看当前分支
 - #结果显示dev分支上有一个标识，代表当前所在分支
-git add readme.md #在分支上完成修改后需要提交
-git commit -m "Branch management"
-git checkout master #切换到主分支
-nv readme.md #查看主分支文件内容，不能发现在dev分支上的修改
-git merge dev #合并dev分支到master
-nv readme.md # dev分支修改可以被看到
-git branch -d dev #删除dev
+- git add readme.md #在分支上完成修改后需要提交
+- git commit -m "Branch management"
+- git checkout master #切换到主分支
+- nv readme.md #查看主分支文件内容，不能发现在dev分支上的修改
+- git merge dev #合并dev分支到master
+  - 如果主次分支有两个文件名相同但内容不同的的文件，git会自动合并到一个文件，并给出提示。只需用多个>,多个<,多个=来标记不同分支所做的修改。
+- nv readme.md # dev分支修改可以被看到
+- git branch -d dev #删除dev
 
 
 
