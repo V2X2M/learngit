@@ -42,7 +42,7 @@ commit之前确保已经表明自己的身份
 
 - git config --global user.name "V2X2M"  
 - git config --global user.email "lxkqv@outlook.com"  
-- git config credential.helper store
+- git config credential.helper store #用于保存密码
 git commit -m "描述"
 git commit<CR> #打开默认编辑器输入您的描述
 git config --globle core.editer #默认编辑器
