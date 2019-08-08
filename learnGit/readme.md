@@ -12,13 +12,22 @@ Git is free software
 - git add readme.txt # The number of file are no limited  
 - git commit -m "There is a description" # commit all files  
 
-**以上几步只是建立了本地git仓库，提交也只是提交到本地git仓库**
-
 ## git 穿越
 - git log # View content which is change
 - git reset --hard HEAD^ #回退到上一个版本,HEAD^^^或HEAD~100
 - git reset --hard a4ef3f #再到最新的版本，或者指定版本号从而回到指定版本。版本号·写5位数字以上
 - git reflog #在任何时间查看任何 穿越 过的文件
+
+**以上几步只是建立了本地git仓库，提交和回退版本也只是在本地git仓库**
+
+## 建立远程仓库并与本地仓库关联
+- ssh-keygen -t rsa -C "lxkqv@outlook.com" # 创建ssh密钥 ,一路回车
+- nvim ~/.ssh/id_rsa.pub # 复制密钥到github.把每台电脑的ssh-key添加到github就能在每台电脑上连接github
+- 在github网站上建立一个远程仓库，但嫑初始化，即嫑 README.md 文件
+- git remote add origin https://github.com/V2X2M/learngit.git
+- git push -u origin master #把本地仓库的所有内容推送到远程仓库，-u可看作union，即把本地和远程仓库关联
+
+
 
 # git CW
 git init # initialize git
