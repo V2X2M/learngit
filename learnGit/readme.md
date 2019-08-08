@@ -6,7 +6,7 @@ Git is free software
 - git config --global user.email "lxkqv@outlook.com"  
 - mkdir -p ~/Github/learnGit/  
 - cd ~/Github  
-- git init # initialize git directory "~/Github", A hidden directory "Github/.git/" was created  
+- git init #把当前目录初始化为git仓库 initialize git directory "~/Github", A hidden directory "Github/.git/" was created  
 - cd learnGit/  
 - vim readme.txt  
 - git add readme.txt # The number of file are no limited  
@@ -39,6 +39,13 @@ git push origin master
 - #git checkout -b dev # 创建并切换到 dev 分支
 - git branch #查看当前分支
 - #结果显示dev分支上有一个标识，代表当前所在分支
+git add readme.md #在分支上完成修改后需要提交
+git commit -m "Branch management"
+git checkout master #切换到主分支
+nv readme.md #查看主分支文件内容，不能发现在dev分支上的修改
+git merge dev #合并dev分支到master
+nv readme.md # dev分支修改可以被看到
+git branch -d dev #删除dev
 
 
 
